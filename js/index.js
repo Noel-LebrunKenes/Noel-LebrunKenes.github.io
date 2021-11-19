@@ -1,4 +1,4 @@
-const listNom =["Richard","Carine", "Camille", "Benj","Louise", "Erwan"]
+const listNom =["Richard","Carine", "Camille", "Benj","Louise", "Erwan", "Meryll", "Thomas", "Céline", "Anne", "Daniel", "Ilona", "Quentin", "Jean-Luc", "Cévia", "Raphaël" ]
 
 // init
 function init(){

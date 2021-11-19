@@ -9,7 +9,7 @@ body {
 	font-family: 'Hind', sans-serif;
 	color: white;
 	font-size: 16px;
-	background-color: #772111;
+	background-color: #8B1900;
 }
 
 a:link {
@@ -76,12 +76,12 @@ h2{
 	font-weight: 500;
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
-	color: #9ED8CC;
+	color: #A1D6CE;
 	box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
 }
 
 .wishlist i{
-	color: #772111;
+	color: #8B1900;
 	left: 50px;
 	position: absolute;
 	font-size: 1.5em;
@@ -100,12 +100,12 @@ h2{
 	font-weight: 500;
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
-	color: #9ED8CC;
+	color: #A1D6CE;
 	box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
 }
 
 .ideecadeau i{
-	color: #772111;
+	color: #8B1900;
 	right: 50px;
 	position: absolute;
 	font-size: 1.5em;
@@ -121,7 +121,7 @@ h2{
 .button{
 	font-size: 1.5em;
 	font-weight: bold;
-	color: #772111;
+	color: #8B1900;
 	background-color: white;
 	border-radius: 25px;
 	padding-right: 1em;
@@ -162,7 +162,7 @@ h2{
 }
 
 .modal-contents {
-	height: 50%;
+	height: 65%;
 	width: 80%;
 	background-color: white;
 	text-align: center;
@@ -183,7 +183,7 @@ h2{
 
 .modal-title{
 	font-size: 2em;
-	color: #772111;
+	color: #8B1900;
 	font-weight: bold;
 	margin-bottom: 0.5em;
 }

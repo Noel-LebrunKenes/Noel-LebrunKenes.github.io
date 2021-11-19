@@ -1,4 +1,4 @@
-const listNom =["Richard","Carine", "Camille", "Benj","Louise", "Erwan"]
+const listNom =["Richard","Carine", "Camille", "Benj","Louise", "Erwan", "Meryll", "Thomas", "Céline", "Anne", "Daniel", "Ilona", "Quentin", "Jean-Luc", "Cévia", "Raphaël" ]
 
 var apiUrl = 'https://script.google.com/macros/s/AKfycbwLqc77SviUgvxWu6uWc8X3V_pZlYDzjSCw5CshkZjW8EfoBrPV3zg-EkuVgCfkYCLpIA/exec';
 
