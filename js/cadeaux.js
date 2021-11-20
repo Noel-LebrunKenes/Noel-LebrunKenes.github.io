@@ -7,6 +7,18 @@ var dataTable = "";
 // init
 
 function init(){
+
+  // loading
+  var documentMainDiv = document.getElementsByClassName('main')[0];
+  console.log(documentMainDiv)
+  var loading = document.createElement("i");
+  loading.classList.add("fas", "fa-circle-notch", "fa-spin", "loading-icon")
+  var loadingDiv = document.createElement("div");
+  loadingDiv.classList.add("loading-div")
+  loadingDiv.appendChild(loading)
+
+  documentMainDiv.appendChild(loadingDiv);
+
   // API  Call
   fetch(apiUrl).then(response => {
     return response.json();
@@ -14,6 +26,9 @@ function init(){
     // Work with JSON data here
     console.log(data);
     dataTable = data;
+
+    // suppr loading
+    document.getElementsByClassName('loading-div')[0].remove();
     
     // ne pas avoir ses propres cadeaux
     listNom.splice(listNom.indexOf(sessionStorage.getItem('nom')), 1);

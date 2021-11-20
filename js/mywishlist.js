@@ -8,10 +8,29 @@ function init(){
   // get nom of user
   var nom = sessionStorage.getItem('nom');
 
+  // loading
+  var documentMainDiv = document.getElementsByClassName('main-div')[0];
+  console.log(documentMainDiv)
+  var loading = document.createElement("i");
+  loading.classList.add("fas", "fa-circle-notch", "fa-spin", "loading-icon")
+  var loadingDiv = document.createElement("div");
+  loadingDiv.classList.add("loading-div")
+  loadingDiv.appendChild(loading)
+
+  documentMainDiv.appendChild(loadingDiv);
+
   // API  Call
   fetch(apiUrl).then(response => {
+
+    
+
     return response.json();
   }).then(data => {
+
+    // suppr loaing
+
+    document.getElementsByClassName('loading-div')[0].remove();
+
     // Work with JSON data here
     console.log(data);
 
