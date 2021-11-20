@@ -25,7 +25,7 @@ function init(){
       var newPCadeau = document.createElement("p");
       newPCadeau.appendChild(document.createTextNode(listCadeau[i].Cadeau));
       var newIcon = document.createElement("i");
-      newIcon.classList.add("fas", "fa-trash-alt", "i-"+ listCadeau[i].ID, "icon")
+      newIcon.classList.add("fas", "fa-trash-alt", "icon", "i-"+ listCadeau[i].ID)
 
       newDivCadeau.appendChild(newPCadeau);
       newDivCadeau.appendChild(newIcon);
@@ -73,8 +73,8 @@ function addCadeau(nom, cadeau){
 
         var icon = document.getElementsByClassName("i-last");
 
-        icon[0].classList.add("i-" + data.ID, "icon")
-        icon[0].classList.remove("i-last");
+        icon[0].classList.add("fa-trash-alt", "icon", "i-" + data.ID)
+        icon[0].classList.remove("i-last", "fa-circle-notch", "fa-spin");
  
       }
 
@@ -137,8 +137,9 @@ document.addEventListener('click', function(e){
       var newPCadeau = document.createElement("p");
       newPCadeau.appendChild(document.createTextNode(cadeau));
       var newIcon = document.createElement("i");
-      newIcon.classList.add("fas", "fa-trash-alt", "i-last", "icon")
-
+      //newIcon.classList.add("fas", "fa-trash-alt", "icon", "i-last")
+      newIcon.classList.add("fas", "fa-circle-notch", "icon", "i-last", "fa-spin")
+      
       newDivCadeau.appendChild(newPCadeau);
       newDivCadeau.appendChild(newIcon);
 
@@ -150,13 +151,13 @@ document.addEventListener('click', function(e){
 
   // delete cadeau
   
-  if(e.target && e.target.classList.contains('icon')){
+  if(e.target && e.target.classList.contains('icon') && e.target.classList.contains('fa-trash-alt')){
 
     //get value of nom and cadeau
-    var id = e.target.classList[2].substring(2);
-    console.log("id : ", id);
+    var id = e.target.classList[3].substring(2);
+    console.log("id : ", id, "  liste class", e.target.classList );
     // delete the line
-    document.getElementsByClassName(e.target.classList[2])[0].parentNode.remove();
+    document.getElementsByClassName(e.target.classList[3])[0].parentNode.remove();
 
     deleteCadeau(id);
 }
